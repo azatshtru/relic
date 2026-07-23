@@ -36,33 +36,10 @@ You customize the mounting/unmounting behaviour and implement transitions yourse
 
 
 ## quickstart
-
-### import the primitives
-*through jsDelivr*
 ```javascript
 import { signal, memo } from 'https://cdn.jsdelivr.net/gh/azatshtru/relic/lib/relic-core.js';
 import { syn, mount, bind } from 'https://cdn.jsdelivr.net/gh/azatshtru/relic/lib/relic-anvil.js';
-```
 
-*or using html importmap*
-```html
-<script type="importmap">
-{
-    "imports": {
-        "relic-anvil": "https://cdn.jsdelivr.net/gh/azatshtru/relic/lib/relic-anvil.js",
-        "relic-core": "https://cdn.jsdelivr.net/gh/azatshtru/relic/lib/relic-core.js",
-    }
-}
-</script>
-```
-then in javascript,
-```javascript
-import { signal, memo, effect } from "relic-core";
-import { syn, bind, mount } from "relic-anvil";
-```
-
-### compose!
-```javascript
 function Hello() {
     return syn('h1').text('Hello, world!');
 }
