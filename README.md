@@ -5,7 +5,7 @@ relic is a fine-grained reactive, declarative JavaScript "mid-level" framework d
 
 - fine-grained reactive? relic doesn't maintain a DOM tree and uses surgical diffing to minimize DOM updates on state change.
 - declarative? relic's API utilizes pure functions that do not mutate the DOM until mounted.
-- mid-level? [yes.](#mid-level?)
+- mid-level? [yes.](#mid-level)
 - zero-cost abstractions? [yes.](#zero-cost-abstractions)
 - efficient? being fast is about doing less. relic is just an API over raw JavaScript, two small files minified. relic uses minimal memory and uses the most optimized algorithms for diffing and internals, the API is single layer.
 - correctness? relic requires you to be explicit, it doesn't hide decision making functionality under "magic", combined with the functional thinking model produces programs which are easier to prove the correctness of (given the constraints of JavaScript).
