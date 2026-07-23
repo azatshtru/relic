@@ -40,9 +40,14 @@ You customize the mounting/unmounting behaviour and implement transitions yourse
 import { signal, memo } from 'https://cdn.jsdelivr.net/gh/azatshtru/relic/lib/relic-core.js';
 import { syn, mount, bind } from 'https://cdn.jsdelivr.net/gh/azatshtru/relic/lib/relic-anvil.js';
 
-function Hello() {
-    return syn('h1').text('Hello, world!');
+function Counter() {
+    const count = signal(0);
+    return syn('div').children([
+        syn('h1').text('Counter'),
+        syn('p').text(count),
+        syn('button').text('+1').on('click', () => count.mut(c => c + 1)),
+    ]);
 }
 
-mount(Hello(), document.body);
+mount(Counter(), document.body);
 ```
